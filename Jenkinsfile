@@ -81,6 +81,11 @@ pipeline {
                         dockerHubRegister('4.2.2')
                     }
                 }
+                stage('Deploy 4.3') {
+                    steps {
+                        dockerHubRegister('4.3')
+                    }
+                }
             }
         }
     }
