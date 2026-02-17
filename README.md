@@ -151,7 +151,7 @@ ENV PATH="$PATH:/root/.local/bin/"
 
 **Q: Is there a C#/Mono Version?**
 
-**A:** Since I use mainly gdscript there is no C#/Mono version yet.
+**A:** Since I use mainly gdscript, I will not provide a C#/mono version. But there is a C#/mono version by Liphium: https://github.com/Liphium/godot-dotnet-dockerfile
 
 **Q: Why does Godot throw `Parse Error: Identifier "..." not declared in the current scope.` in my CI/CD pipeline?**
 
