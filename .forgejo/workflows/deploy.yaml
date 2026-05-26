@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -43,7 +44,6 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
       - name: Build stable image and push Docker image
-        if: ${{ !contains(matrix.version, '-') }}
         uses: docker/build-push-action@v6
         with:
           context: .
@@ -51,3 +51,5 @@ jobs:
           push: true
           build-args: |
             GODOT_VERSION=${{ matrix.version }}
+          cache-from: type=registry,ref=dunkelgrau/godot:${{ matrix.version }}
+          cache-to: type=inline
