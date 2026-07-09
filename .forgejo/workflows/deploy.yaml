@@ -33,6 +33,7 @@ jobs:
           - "4.6.1"
           - "4.6.2"
           - "4.7"
+          - "4.7.1"
 
     steps:
       - name: Checkout code
@@ -49,7 +50,6 @@ jobs:
         with:
           driver: docker-container
           install: true
-
 
       - name: Build stable image and push Docker image
         uses: docker/build-push-action@v6
