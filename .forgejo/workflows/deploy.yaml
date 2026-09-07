@@ -60,5 +60,3 @@ jobs:
           push: true
           build-args: |
             GODOT_VERSION=${{ matrix.version }}
-          cache-from: type=registry,ref=dunkelgrau/godot:${{ matrix.version }}
-          cache-to: type=registry,ref=dunkelgrau/godot:${{ matrix.version }}
